@@ -1,11 +1,12 @@
 <?php
-  $folder = 'nyashkee/';
-  $extList = array();
+
+ 	$folder = '';
+	$extList = array();
 	$extList['gif'] = 'image/gif';
 	$extList['jpg'] = 'image/jpeg';
 	$extList['jpeg'] = 'image/jpeg';
 	$extList['png'] = 'image/png';
-  $img = null;
+	$img = null;
 
 if (substr($folder,-1) != '/') {
 	$folder = $folder.'/';
