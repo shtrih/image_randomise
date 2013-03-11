@@ -34,7 +34,8 @@ if (isset($_GET['img'])) {
 	closedir($handle);
 
 	if (count($fileList) > 0) {
-		$imageNumber = time() % count($fileList);
+		//$imageNumber = time() % count($fileList);
+		$imageNumber = rand(1, 10000) % count($fileList);
 		$img = $folder.$fileList[$imageNumber];
 	}
 }
