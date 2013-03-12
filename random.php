@@ -1,6 +1,6 @@
 <?php
 
- 	$folder = '';
+	$folder = '/foo/bar/';
 	$extList = array();
 	$extList['gif'] = 'image/gif';
 	$extList['jpg'] = 'image/jpeg';
@@ -21,24 +21,32 @@ if (isset($_GET['img'])) {
 		$img = $folder.$imageInfo['basename'];
 	}
 } else {
-	$fileList = array();
-	$handle = opendir($folder);
-	while ( false !== ( $file = readdir($handle) ) ) {
-		$file_info = pathinfo($file);
-		if (
-		    isset( $extList[ strtolower( $file_info['extension'] ) ] )
-		) {
-			$fileList[] = $file;
-		}
-	}
-	closedir($handle);
 
-	if (count($fileList) > 0) {
-		//$imageNumber = time() % count($fileList);
-		$imgCount = count($fileList);
-		$imageNumber = rand(1, $imgCount) % count($fileList);
-		$img = $folder.$fileList[$imageNumber];
-	}
+	function rand_line($fileName, $maxLineLength = 4096) {
+    $handle = @fopen($fileName, "r");
+    if ($handle) {
+        $random_line = null;
+        $line = null;
+        $count = 0;
+        while (($line = fgets($handle, $maxLineLength)) !== false) {
+            $count++;
+            if(rand() % $count == 0) {
+              $random_line = $line;
+            }
+        }
+        if (!feof($handle)) {
+            echo "Error: unexpected fgets() fail";
+            fclose($handle);
+            return null;
+        } else {
+            fclose($handle);
+        }
+        return $random_line;
+    }
+}
+
+	$fileList = trim(preg_replace('/[\r\n]+/m','',rand_line("/foo/bar/index.ls"))); 
+	$img = $folder.$fileList;
 }
 
 if ($img!=null) {
@@ -47,7 +55,7 @@ if ($img!=null) {
 	$name = 'Content-Disposition: inline; filename="'.$imageInfo['basename'].'"';
 	header ($contentType);
 	header ($name);
-	readfile($img);
+	readfile ($img);
 } else {
 	if ( function_exists('imagecreate') ) {
 		header ('Content-type: image/png');
