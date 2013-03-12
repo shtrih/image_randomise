@@ -1,7 +1,7 @@
 <?php
 
 	$folder = '/foo/bar/';
-	$index = $folder.'index.sqlite';
+	$index = $folder.'index.ls';
 	$extList = array();
 	$extList['gif'] = 'image/gif';
 	$extList['jpg'] = 'image/jpeg';
@@ -23,6 +23,7 @@ if (isset($_GET['img'])) {
 	}
 } else {
 
+    //+Rei Ayanami fix
     $imageIndex = file($index);
     $imageRandom = array_rand($imageIndex);
     $imageResult = $imageIndex[$imageRandom];
