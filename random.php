@@ -29,7 +29,7 @@ if (isset($_GET['img'])) {
     $imageResult = $imageIndex[$imageRandom];
 }
 
-	$fileList = trim(preg_replace('/[\r\n]+/m','',$imageResult)); 
+	$fileList = rtrim($imageResult, " \n");
 	$img = $folder.$fileList;
 
 if ($img!=null) {
