@@ -1,5 +1,5 @@
 <?php
-
+	//global variables
 	$folder = '/foo/bar/';
 	$index = $folder.'index.ls';
 	$extList = array();
@@ -22,23 +22,23 @@ if (isset($_GET['img'])) {
 		$img = $folder.$imageInfo['basename'];
 	}
 } else {
-
-    //+Rei Ayanami fix
+    //+Rei Ayanami randomise engine fix
     $imageIndex = file($index);
     $imageRandom = array_rand($imageIndex);
     $imageResult = $imageIndex[$imageRandom];
 }
-
+	//dirty '\n' hack /._.\
 	$fileList = rtrim($imageResult, " \n");
 	$img = $folder.$fileList;
 
 if ($img!=null) {
+	//set headers and image output
 	$imageInfo = pathinfo($img);
 	$contentType = 'Content-type: '.$extList[ $imageInfo['extension'] ];
-        $contentLength = 'Content-Length: '.filesize($img);
+	$contentLength = 'Content-Length: '.filesize($img);
 	$name = 'Content-Disposition: inline; filename="'.$imageInfo['basename'].'"';
 	header ($contentType);
-        header ($contentLength);
+	header ($contentLength);
 	header ($name);
 	readfile ($img);
 
