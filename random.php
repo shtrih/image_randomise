@@ -35,8 +35,10 @@ if (isset($_GET['img'])) {
 if ($img!=null) {
 	$imageInfo = pathinfo($img);
 	$contentType = 'Content-type: '.$extList[ $imageInfo['extension'] ];
+        $contentLength = 'Content-Length: '.filesize($img);
 	$name = 'Content-Disposition: inline; filename="'.$imageInfo['basename'].'"';
 	header ($contentType);
+        header ($contentLength);
 	header ($name);
 	readfile ($img);
 
