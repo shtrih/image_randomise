@@ -24,8 +24,7 @@ if (isset($_GET['img'])) {
 } else {
     //+Rei Ayanami randomise engine fix
     $imageIndex = file($index);
-    $imageRandom = array_rand($imageIndex);
-    $imageResult = $imageIndex[$imageRandom];
+    $imageResult = $imageIndex[array_rand(file($index))];
 }
 	//dirty '\n' hack /._.\
 	$fileList = rtrim($imageResult, " \n");
