@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+<Files index.ls>
+Deny from all
+</Files>
+
