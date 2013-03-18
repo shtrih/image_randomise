@@ -22,13 +22,11 @@ if (isset($_GET['img'])) {
 		$img = $folder.$imageInfo['basename'];
 	}
 } else {
-    //+Rei Ayanami randomise engine fix
-    $imageIndex = file($index);
-    $imageResult = $imageIndex[array_rand(file($index))];
+	//+Rei Ayanami and +Kot Obormot randomise engine fix
+	$imageIndex = file("$index", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$imageResult = $imageIndex[array_rand(file($index))];
+	$img = $folder.$imageResult;
 }
-	//dirty '\n' hack /._.\
-	$fileList = rtrim($imageResult, " \n");
-	$img = $folder.$fileList;
 
 if ($img!=null) {
 	//set headers and image output
