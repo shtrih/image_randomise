@@ -36,6 +36,7 @@ if ($img!=null) {
 	header ($contentType);
 	header ($contentLength);
 	header ($name);
+	header ('Cache-Control: no-cache');
 	readfile ($img);
 
 } else {
