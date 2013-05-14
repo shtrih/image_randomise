@@ -30,6 +30,11 @@ if (isset($_GET['img'])) {
 if ($img!=null) {
 	$imageInfo = pathinfo($img);
 	$name = $imageInfo['basename'];
+	$fsize = filesize("$img");
+	$size = (int)($fsize/1024);
+	$resolution = getimagesize("$img");
+	$width  = $resolution [0];
+	$height = $resolution [1];
 	echo "<!DOCTYPE html>
 <html>
 	<head>
@@ -38,11 +43,13 @@ if ($img!=null) {
 		<style type=\"text/css\">
 			html {background: url(\"bg.png\") center repeat fixed;}
 			.content {width: 800px; position: relative; margin: auto;}
-			.img {padding-top: 20px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
-			.img img {max-width: 798px; max-height: 1000px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
 			.share {width: 800px; text-align: center; padding-top: 10px;}
 			.link {height: 29px; width: 746px; background: #fff; border: 1px solid rgba(0,0,0,0.1); padding-left: 10px; display: block;}
 			.gplus {display: block; float: left; margin-right: 10px; width: 32px; height: 32px;}
+			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
+			.info span {display: block; margin-top: 4px;}
+			.img {padding-top: 0px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
+			.img img {max-width: 798px; max-height: 1000px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
 			.footer {font-family: Arial; font-size: 10px; color: rgba(0,0,0,0.5); text-align: center; padding: 10px 0 10px 0;}
 			.footer a {color: rgba(0,0,0,0.5); text-decoration: none;}
 			.footer a:hover {color: #f00; text-decoration: none;}
@@ -55,8 +62,8 @@ if ($img!=null) {
 				<a class=\"gplus\" href=\"https://plus.google.com/share?url=http://nyan.me/$img\" onclick=\"javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;\"><img src=\"https://www.gstatic.com/images/icons/gplus-32.png\" alt=\"Share on Google+\"/></a>
 				<input autofocus readonly class=\"link\" type=\"text\" value=\"http://nyan.me/$img\">
 			</div>
+			<div class=\"info\"><span>$width &times; $height px &nbsp;&nbsp;@&nbsp;&nbsp; $size Kb</span></div>
 			<div class=\"img\">
-					<!-- a class=\"derp\" href=\"/$img\" alt=\"$name\" title=\"$name\"><img src=\"/$img\" alt=\"$name\" title=\"$name\"></a -->
 					<img src=\"/$img\" alt=\"$name\" title=\"$name\">
 			</div>
 		</div>
