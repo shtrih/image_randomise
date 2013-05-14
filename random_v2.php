@@ -59,7 +59,7 @@ if ($img!=null) {
 				<a href=\"/$img\" alt=\"$name\" title=\"$name\"><img src=\"/$img\" alt=\"$name\" title=\"$name\"></a>
 			</div>
 		</div>
-		<div class=\"footer\">develop in <a href=\"http://fastpoke.org/\" target=\"_blank\">fastpoke.org</a></div>
+		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a></div>
 	</body>
 </html>";
 } else {
