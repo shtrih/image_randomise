@@ -36,13 +36,16 @@ if ($img!=null) {
 		<title>nyaa~ :: $name</title>
 		<style type=\"text/css\">
 			html {background: url(\"bg.png\") center repeat fixed;}
-			.content {width: 800px; position: relative; margin: auto;}
-			.img {padding-top: 20px; padding-bottom: 20px; max-height: 1000px;width: 800px; margin: 0 auto;}
-			.img img {max-height: 1000px; max-width: 800px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); text-align: center; display: block;}
-			.share {width: 600px; text-align: center;}
+			.content {width: 802px; position: relative; margin: auto;}
+			.img {padding-top: 20px; padding-bottom: 20px; max-height: 1000px;width: 802px; margin: 0 auto;}
+			.img img {max-height: 1000px; max-width: 796px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); text-align: center; display: block;}
+			.share {width: 802px; text-align: center;}
 			.link {display: block;}
 			.gplus {display: block; float: left; padding-right: 5px;}
-			input {height: 29px; width: 764px; background: #fff; border: 1px solid rgba(0,0,0,0.1);}
+			input {height: 29px; width: 761px; background: #fff; border: 1px solid rgba(0,0,0,0.1);}
+			.footer {font-family: Arial; font-size: 10px; color: rgba(0,0,0,0.5); text-align: center; padding: 10px 0 10px 0;}
+			.footer a {color: #f00; text-decoration: none;}
+			.footer a:hover {text-decoration: underline;}
 		</style>
 	</head>
 	<body>
@@ -56,6 +59,7 @@ if ($img!=null) {
 				<a href=\"/$img\" alt=\"$name\" title=\"$name\"><img src=\"/$img\" alt=\"$name\" title=\"$name\"></a>
 			</div>
 		</div>
+		<div class=\"footer\">develop in <a href=\"http://fastpoke.org/\" target=\"_blank\">fastpoke.org</a></div>
 	</body>
 </html>";
 } else {
