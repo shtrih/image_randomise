@@ -44,8 +44,8 @@ if ($img!=null) {
 			.gplus {display: block; float: left; padding-right: 5px;}
 			input {height: 29px; width: 761px; background: #fff; border: 1px solid rgba(0,0,0,0.1);}
 			.footer {font-family: Arial; font-size: 10px; color: rgba(0,0,0,0.5); text-align: center; padding: 10px 0 10px 0;}
-			.footer a {color: #f00; text-decoration: none;}
-			.footer a:hover {text-decoration: underline;}
+			.footer a {color: rgba(0,0,0,0.5); text-decoration: none;}
+			.footer a:hover {color: #f00; text-decoration: none;}
 		</style>
 	</head>
 	<body>
