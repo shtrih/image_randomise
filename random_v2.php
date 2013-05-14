@@ -41,7 +41,7 @@ if ($img!=null) {
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 		<title>nyaa~ $name</title>
 		<style type=\"text/css\">
-			html {background: url(\"bg.png\") center repeat fixed;}
+			html {background: url(\"bg.png\") center repeat scroll;}
 			.content {width: 800px; position: relative; margin: auto;}
 			.share {width: 800px; text-align: center; padding-top: 10px;}
 			.link {height: 29px; width: 746px; background: #fff; border: 1px solid rgba(0,0,0,0.1); padding-left: 10px; display: block;}
