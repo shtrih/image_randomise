@@ -21,3 +21,5 @@ $folder = '/foo/bar/';
 4. Add `image_index.sh` in crontab for autoindex image files;
 5. ?????
 6. Nya~
+
+<img src="https://raw.github.com/fastpoke/image_randomise/master/preview.png" width="342" height="180">
