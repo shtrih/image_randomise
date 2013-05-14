@@ -33,16 +33,16 @@ if ($img!=null) {
 	echo "<!DOCTYPE html>
 <html>
 	<head>
-		<title>nyaa~ :: $name</title>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+		<title>nyaa~ $name</title>
 		<style type=\"text/css\">
 			html {background: url(\"bg.png\") center repeat fixed;}
-			.content {width: 802px; position: relative; margin: auto;}
-			.img {padding-top: 20px; padding-bottom: 10px; max-height: 1000px;width: 802px; margin: 0 auto;}
-			.img img {max-height: 1000px; max-width: 796px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); text-align: center; display: block;}
-			.share {width: 802px; text-align: center; padding-top: 10px;}
-			.link {display: block;}
-			.gplus {display: block; float: left; margin-right: 5px; margin-left: 2px; width: 32px; height: 32px;}
-			input {height: 29px; width: 750px; background: #fff; border: 1px solid rgba(0,0,0,0.1); padding-left: 10px;}
+			.content {width: 800px; position: relative; margin: auto;}
+			.img {padding-top: 20px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
+			.img img {max-width: 798px; max-height: 1000px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
+			.share {width: 800px; text-align: center; padding-top: 10px;}
+			.link {height: 29px; width: 746px; background: #fff; border: 1px solid rgba(0,0,0,0.1); padding-left: 10px; display: block;}
+			.gplus {display: block; float: left; margin-right: 10px; width: 32px; height: 32px;}
 			.footer {font-family: Arial; font-size: 10px; color: rgba(0,0,0,0.5); text-align: center; padding: 10px 0 10px 0;}
 			.footer a {color: rgba(0,0,0,0.5); text-decoration: none;}
 			.footer a:hover {color: #f00; text-decoration: none;}
@@ -56,7 +56,8 @@ if ($img!=null) {
 				<input autofocus readonly class=\"link\" type=\"text\" value=\"http://nyan.me/$img\">
 			</div>
 			<div class=\"img\">
-				<a href=\"/$img\" alt=\"$name\" title=\"$name\"><img src=\"/$img\" alt=\"$name\" title=\"$name\"></a>
+					<!-- a class=\"derp\" href=\"/$img\" alt=\"$name\" title=\"$name\"><img src=\"/$img\" alt=\"$name\" title=\"$name\"></a -->
+					<img src=\"/$img\" alt=\"$name\" title=\"$name\">
 			</div>
 		</div>
 		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a></div>
