@@ -34,7 +34,7 @@ if ($img!=null) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!-- current version: 0.5 -->
+	echo "<!-- current version: 0.6 -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -59,8 +59,8 @@ if ($img!=null) {
 			.img img {max-width: 798px; max-height: 820px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
 			.footer {width: 800px; margin: 0 auto; font-family: Arial; font-size: 10px; color: #000; padding: 10px 0 10px 0;}
 			.footer span {display: block; text-align: center;}
-			.footer a {color: #f00; text-decoration: none;}
-			.footer a:hover {color: #f00; text-decoration: underline;}
+			.footer a {color: #000; font-weight: bold; text-decoration: none;}
+			.footer a:hover {color: #f00; text-decoration: none;}
 		</style>
 	</head>
 	<body>
