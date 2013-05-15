@@ -39,6 +39,7 @@ if ($img!=null) {
 <html>
 	<head>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
 		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
 		<title>nyaa~ $name</title>
 		<style type=\"text/css\">
@@ -67,7 +68,7 @@ if ($img!=null) {
 		<div class=\"content\">
 			<div class=\"share\">
 				<a class=\"gplus\" href=\"https://plus.google.com/share?url=http://nyan.me/$img\" onclick=\"javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;\"><img src=\"img/gplus.png\" alt=\"Share on Google+\" title=\"Share on Google+\"/></a>
-				<img class=\"reload\" src=\"img/reload.png\" onClick=\"document.location.reload(true)\" title=\"Reload page\">
+				<img class=\"reload\" src=\"img/reload.png\" onClick=\"window.location.reload(false);\" title=\"Reload page\">
 				<input readonly class=\"link\" id=\"copy\" type=\"text\" value=\"http://nyan.me/$img\">
 			</div>
 			<div class=\"info\"><span>$width &times; $height px &nbsp;&nbsp;@&nbsp;&nbsp; $size Kb</span></div>
