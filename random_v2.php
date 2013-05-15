@@ -43,7 +43,7 @@ if ($img!=null) {
 		<title>nyaa~ $name</title>
 		<style type=\"text/css\">
 			* {-webkit-transition: 0.5s; -moz-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;}
-			html {background: url(\"/img/bg.png\") center repeat scroll;}
+			html {background: url(\"img/bg.png\") center repeat scroll;}
 			.content {width: 800px; margin: auto; padding-top: 15px;}
 			.share {width: 801px; text-align: center;}
 			.gplus {display: block; float: left; margin-right: 10px; width: 34px; height: 34px;}
@@ -55,8 +55,9 @@ if ($img!=null) {
 			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
 			.info span {display: block; margin-top: 4px;}
 			.img {padding-top: 0px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
-			.img img {max-width: 798px; max-height: 1000px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
-			.footer {font-family: Arial; font-size: 10px; color: #000; text-align: center; padding: 10px 0 10px 0;}
+			.img img {max-width: 798px; max-height: 820px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
+			.footer {width: 800px; margin: 0 auto; font-family: Arial; font-size: 10px; color: #000; padding: 10px 0 10px 0;}
+			.footer span {display: block; text-align: center;}
 			.footer a {color: #f00; text-decoration: none;}
 			.footer a:hover {color: #f00; text-decoration: underline;}
 		</style>
