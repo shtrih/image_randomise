@@ -34,7 +34,8 @@ if ($img!=null) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!DOCTYPE html>
+	echo "<!-- current version: 0.5 -->
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
