@@ -22,4 +22,4 @@ $folder = '/foo/bar/';
 5. ?????
 6. Nya~
 
-<img src="https://raw.github.com/fastpoke/image_randomise/master/preview.png" width="640" height="337">
+<img src="https://raw.github.com/fastpoke/image_randomise/master/preview.png" width="920" height="438">
