@@ -41,13 +41,16 @@ if ($img!=null) {
 		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
 		<title>nyaa~ $name</title>
 		<style type=\"text/css\">
-			html {background: url(\"img/bg.png\") center repeat scroll;}
+			* {-webkit-transition: 0.5s; -moz-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;}
+			html {background: url(\"/img/bg.png\") center repeat scroll;}
 			.content {width: 800px; margin: auto; padding-top: 15px;}
 			.share {width: 801px; text-align: center;}
 			.gplus {display: block; float: left; margin-right: 10px; width: 34px; height: 34px;}
 			.reload {display: block; width: 30px; height: 30px; border: 1px solid rgba(0,0,0,0.1); cursor: pointer; background: #fff; margin-right: 10px; float: left;}
+			.reload:hover {-webkit-box-shadow: #f00 0px 0px 3px; -moz-box-shadow: #f00 0px 0px 3px; -o-box-shadow: #f00 0px 0px 3px; box-shadow: #f00 0px 0px 3px;}
 			.reload:active {opacity: 0.5;border: 1px solid #f00;}
 			.link {height: 28px; width: 702px; background: #fff; border: 1px solid rgba(0,0,0,0.1); display: block; padding-left: 10px;}
+			.gplus, .reload, .link, .img img {-webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px;}
 			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
 			.info span {display: block; margin-top: 4px;}
 			.img {padding-top: 0px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
