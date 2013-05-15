@@ -3,7 +3,7 @@ Image randomise
 
 Random output raw image from directory.
 
-1. Edit `image_index.sh` and **chmod +x `image_index.sh`**;
+1. Edit `image_index.sh` and **chmod +x** `image_index.sh`;
 ```
 #!/bin/bash
 ...
