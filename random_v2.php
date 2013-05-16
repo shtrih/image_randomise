@@ -56,7 +56,7 @@ if ($img!=null) {
 			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
 			.info span {display: block; margin-top: 4px;}
 			.img {padding-top: 0px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
-			.img img {max-width: 798px; max-height: 820px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block;}
+			.img img {max-width: 798px; max-height: 820px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block; background: #fff;}
 			.footer {width: 800px; margin: 0 auto; font-family: Arial; font-size: 10px; color: #000; padding: 10px 0 10px 0;}
 			.footer span {display: block; text-align: center;}
 			.footer a {color: #000; font-weight: bold; text-decoration: none;}
