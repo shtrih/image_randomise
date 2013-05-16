@@ -34,7 +34,7 @@ if ($img!=null) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!-- current version: 0.6 -->
+	echo "<!-- current version: 0.7 -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -50,7 +50,7 @@ if ($img!=null) {
 			.gplus {display: block; float: left; margin-right: 10px; width: 34px; height: 34px;}
 			.reload {display: block; width: 30px; height: 30px; border: 1px solid rgba(0,0,0,0.1); cursor: pointer; background: #fff; margin-right: 10px; float: left;}
 			.reload:hover {-webkit-box-shadow: #f00 0px 0px 3px; -moz-box-shadow: #f00 0px 0px 3px; -o-box-shadow: #f00 0px 0px 3px; box-shadow: #f00 0px 0px 3px;}
-			.reload:active {opacity: 0.5;border: 1px solid #f00;}
+			.reload:active {border: 1px solid rgba(0,0,0,0.1); -webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; -moz-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; -o-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset;}
 			.link {height: 28px; width: 702px; background: #fff; border: 1px solid rgba(0,0,0,0.1); display: block; padding-left: 10px;}
 			.gplus, .reload, .link, .img img {-webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px;}
 			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
@@ -69,7 +69,7 @@ if ($img!=null) {
 			<div class=\"share\">
 				<a class=\"gplus\" href=\"https://plus.google.com/share?url=http://nyan.me/$img\" onclick=\"javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;\"><img src=\"img/gplus.png\" alt=\"Share on Google+\" title=\"Share on Google+\"/></a>
 				<img class=\"reload\" src=\"img/reload.png\" onClick=\"window.location.reload(false);\" title=\"Reload page\">
-				<input readonly class=\"link\" id=\"copy\" type=\"text\" value=\"http://nyan.me/$img\">
+				<input readonly class=\"link\" id=\"copy\" type=\"text\" value=\"http://nyan.me/$img\" onclick=\"this.select()\">
 			</div>
 			<div class=\"info\"><span>$width &times; $height px &nbsp;&nbsp;@&nbsp;&nbsp; $size Kb</span></div>
 			<div class=\"img\">
