@@ -62,14 +62,26 @@ if ($img!=null) {
 </html>";
 } else {
 	if ( function_exists('imagecreate') ) {
-		header ('Content-type: image/png');
-		$im = @imagecreate (100, 100)
-		    or die ("Cannot initialize new GD image stream");
-		$background_color = imagecolorallocate ($im, 255, 255, 255);
-		$text_color = imagecolorallocate ($im, 0,0,0);
-		imagestring ($im, 2, 5, 5,  "IMAGE ERROR", $text_color);
-		imagepng ($im);
-		imagedestroy($im);
+	echo "<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
+		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
+		<link rel=\"icon\" href=\"/img/9.png\" type=\"image/x-png\" />
+		<link href=\"css/random.css\" rel=\"stylesheet\" media=\"all\" />
+		<title>nyaa~ error</title>
+		</head>
+	<body>
+		<a href=\"https://github.com/fastpoke/image_randomise\"><img class=\"github\" src=\"img/github.png\"></a>
+		<div class=\"content\">
+			<div class=\"error\">
+			<span>Oops~! Something is broken ._.</span>
+			</div>
+		</div>
+		<div class=\"footer\"><span><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></span></div>
+	</body>
+</html>";
 	}
 }
 

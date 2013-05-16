@@ -128,3 +128,16 @@ html {
 	color: #f00;
 	text-decoration: none;
 }
+
+.error {
+	text-align: center;
+	height: 300px;
+	width: 800px;
+}
+
+.error span {
+	display: block;
+	margin: 150px 0 0 0;
+	font-family: Arial;
+	font-size: 55px;
+}
