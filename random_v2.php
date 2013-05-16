@@ -42,26 +42,7 @@ if ($img!=null) {
 		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
 		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
 		<title>nyaa~ $name</title>
-		<style type=\"text/css\">
-			* {-webkit-transition: 0.5s; -moz-transition: 0.5s; -o-transition: 0.5s; transition: 0.5s;}
-			html {background: url(\"img/bg.png\") center repeat scroll;}
-			.content {width: 800px; margin: auto; padding-top: 15px;}
-			.share {width: 801px; text-align: center;}
-			.gplus {display: block; float: left; margin-right: 10px; width: 34px; height: 34px;}
-			.reload {display: block; width: 30px; height: 30px; border: 1px solid rgba(0,0,0,0.1); cursor: pointer; background: #fff; margin-right: 10px; float: left;}
-			.reload:hover {-webkit-box-shadow: #f00 0px 0px 3px; -moz-box-shadow: #f00 0px 0px 3px; -o-box-shadow: #f00 0px 0px 3px; box-shadow: #f00 0px 0px 3px;}
-			.reload:active {border: 1px solid rgba(0,0,0,0.1); -webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; -moz-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; -o-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset; box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset;}
-			.link {height: 28px; width: 702px; background: #fff; border: 1px solid rgba(0,0,0,0.1); display: block; padding-left: 10px;}
-			.gplus, .reload, .link, .img img {-webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px;}
-			.info {width: 800px; height: 20px; font-family: Arial; font-size: 10px; text-align: center;}
-			.info span {display: block; margin-top: 4px;}
-			.img {padding-top: 0px; padding-bottom: 10px; margin: 0 auto; width: 800px;}
-			.img img {max-width: 798px; max-height: 820px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.1); display: block; background: #fff;}
-			.footer {width: 800px; margin: 0 auto; font-family: Arial; font-size: 10px; color: #000; padding: 10px 0 10px 0;}
-			.footer span {display: block; text-align: center;}
-			.footer a {color: #000; font-weight: bold; text-decoration: none;}
-			.footer a:hover {color: #f00; text-decoration: none;}
-		</style>
+		<link href=\"css/random.css\" rel=\"stylesheet\" media=\"all\" />
 	</head>
 	<body>
 		<a href=\"https://github.com/fastpoke/image_randomise\"><img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"img/github.png\"></a>
