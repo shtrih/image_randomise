@@ -68,7 +68,7 @@ if ($img!=null) {
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
 		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
-		<link rel=\"icon\" href=\"/img/9.png\" type=\"image/x-png\" />
+		<link rel=\"icon\" href=\"img/9.png\" type=\"image/x-png\" />
 		<link href=\"css/random.css\" rel=\"stylesheet\" media=\"all\" />
 		<title>nyaa~ error</title>
 		</head>
