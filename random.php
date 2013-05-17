@@ -6,7 +6,7 @@
 	$url = 'http://server.tld/';
 	*/
 	define('IMAGE_DIR', '');
-	$index = IMAGE_DIR.'';
+	$index = IMAGE_DIR.'index.ls';
 	$url = '';
 	$extList = array(
 	'gif' => 'image/gif',

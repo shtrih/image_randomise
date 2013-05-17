@@ -6,7 +6,7 @@
 	$url = 'http://server.tld/';
 	*/
 	define('IMAGE_DIR', '');
-	$index = IMAGE_DIR.'';
+	$index = IMAGE_DIR.'index.ls';
 	$url = '';
 	$extList = array(
 	'gif' => 'image/gif',
@@ -58,7 +58,7 @@ if (is_null($img)) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!-- current version: 0.8 -->
+	echo "<!-- current version: 1.0 -->
 <!DOCTYPE html>
 <html>
 	<head>
