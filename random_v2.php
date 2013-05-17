@@ -58,10 +58,10 @@ if (is_null($img)) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!-- current version: 1.0 -->
-<!DOCTYPE html>
+	echo "<!DOCTYPE html>
 <html>
 	<head>
+		<!-- current version: 1.0 -->
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
 		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
 		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
