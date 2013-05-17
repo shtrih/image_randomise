@@ -1,6 +1,6 @@
 <?php
 	//global variables
-	define('IMAGE_DIR', '/foo/bar/'); // images directory (with end slash)
+	define('IMAGE_DIR', dirname(__FILE__).'/i/'); // images directory (with end slash)
 	$index = IMAGE_DIR.'/index.ls';
 	$extList = array(
 		'gif'  => 'image/gif',
