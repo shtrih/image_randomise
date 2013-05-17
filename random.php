@@ -1,7 +1,7 @@
 <?php
 	//global variables
 	define('IMAGE_DIR', dirname(__FILE__).'/i/'); // images directory (with end slash)
-	$index = IMAGE_DIR.'/index.ls';
+	$index = IMAGE_DIR.'index.ls';
 	$extList = array(
 		'gif'  => 'image/gif',
 		'jpg'  => 'image/jpeg',
@@ -20,7 +20,7 @@ if (isset($_GET['img'])) {
 	}
 } else {
 	//+Rei Ayanami and +Kot Obormot randomise engine fix
-	$imageIndex = file("$index", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$imageIndex = file($index, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	$img = IMAGE_DIR.$imageIndex[array_rand(file($index))];
 }
 
