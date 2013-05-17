@@ -7,3 +7,12 @@ Deny from all
 
 RewriteCond %{HTTP_USER_AGENT} Wget.*
 RewriteRule .* /404.html [F]
+
+FileETag MTime Size
+<ifmodule mod_expires.c>
+<filesmatch ".(jpg|jpeg|gif|png|css|js|php|html)$">
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+</filesmatch>
+</ifmodule>
+
