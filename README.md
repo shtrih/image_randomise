@@ -17,7 +17,7 @@ dir=/foo/bar
 $folder = '/foo/bar/';
 ```
 
-3. Copy `.htaccess` into image folder;
+3. Rename `example.htaccess` to `.htaccess`;
 4. Add `image_index.sh` in crontab for autoindex image files;
 5. ?????
 6. Nya~
