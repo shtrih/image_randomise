@@ -37,9 +37,9 @@ if (is_null($img)) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Cache-control" content="must-revalidate">
-		<meta name="generator" content="cat /dev/urandom > random~" />
+		<meta name="generator" content="cat /dev/urandom › random~" />
 		<title>nyaa~ '.$name.'</title>
-		<link href="css/random.css" rel="stylesheet" media="all" />
+		<link href="./css/random.css" rel="stylesheet" media="all" />
 	</head>
 	<body>
 		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="img/github.png"></a>
@@ -64,13 +64,13 @@ if (is_null($img)) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Cache-control" content="must-revalidate">
-		<meta name="generator" content="cat /dev/urandom > random~" />
-		<link rel="icon" href="img/9.png" type="image/x-png" />
-		<link href="css/random.css" rel="stylesheet" media="all" />
+		<meta name="generator" content="cat /dev/urandom › random~" />
+		<link rel="icon" href="./img/9.png" type="image/x-png" />
+		<link href="./css/random.css" rel="stylesheet" media="all" />
 		<title>nyaa~ error</title>
 		</head>
 	<body>
-		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="img/github.png"></a>
+		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="./img/github.png"></a>
 		<div class="content">
 			<div class="error">
 			<span>Oops~! Something is broken ._.</span>
