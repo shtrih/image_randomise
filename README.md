@@ -10,16 +10,18 @@ Random output (raw) image from directory.
 dir=/foo/bar
 ```
 
-2. Edit `random.php` (fix path to image folder);
+2. Edit `random.php` or `random_v2.php` (fix path to image folder and url);
 ```
 <?php
-//global variables
-/*   for example:
-$url = 'http://server.tld/';
-$folder = '/nyaa_images/';
-*/
-$url = '';
-$folder = '';
+	//global variables
+	/*   for example:
+	define('IMAGE_DIR', 'nyaa_images/');
+	$index = IMAGE_DIR.'index.ls';
+	$url = 'http://server.tld/';
+	*/
+	define('IMAGE_DIR', '');
+	$index = IMAGE_DIR.'index.ls';
+	$url = '';
 ```
 
 3. Rename `example.htaccess` to `.htaccess`;

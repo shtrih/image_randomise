@@ -47,7 +47,7 @@ if (is_null($img)) {
 			<span>Oops~! Something is broken ._.</span>
 			</div>
 		</div>
-		<div class=\"footer\"><span><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></span></div>
+		<div class=\"footer\"><span><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"$url\" target=\"_blank\">$url</a></span></div>
 	</body>
 </html>";
 } else {
@@ -81,9 +81,8 @@ if (is_null($img)) {
 					<img src=\"$img\" alt=\"$name\" title=\"$name\">
 			</div>
 		</div>
-		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"$url\" target=\"_blank\">nyan.me</a></div>
+		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"$url\" target=\"_blank\">$url</a></div>
 	</body>
 </html>";
-
 }
 ?>
