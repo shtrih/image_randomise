@@ -1,37 +1,56 @@
 <?php
 	//global variables
 	/*   for example:
+	define('IMAGE_DIR', 'nyaa_images/');
+	$index = IMAGE_DIR.'index.ls';
 	$url = 'http://server.tld/';
-	$folder = '/nyaa_images/';
 	*/
+	define('IMAGE_DIR', '');
+	$index = IMAGE_DIR.'';
 	$url = '';
-	$folder = '';
-	$index = $folder.'index.ls';
-	$extList = array();
-	$extList['gif'] = 'image/gif';
-	$extList['jpg'] = 'image/jpeg';
-	$extList['jpeg'] = 'image/jpeg';
-	$extList['png'] = 'image/png';
+	$extList = array(
+	'gif' => 'image/gif',
+	'jpg' => 'image/jpeg',
+	'jpeg' => 'image/jpeg',
+	'png' => 'image/png'
+	);
 	$img = null;
-
-if (substr($folder,-1) != '/') {
-	$folder = $folder.'/';
-}
 
 if (isset($_GET['img'])) {
 	$imageInfo = pathinfo($_GET['img']);
 	if (
 	    isset( $extList[ strtolower( $imageInfo['extension'] ) ] ) &&
-        file_exists( $folder.$imageInfo['basename'] )
+        file_exists( IMAGE_DIR.$imageInfo['basename'] )
     ) {
-		$img = $folder.$imageInfo['basename'];
+		$img = IMAGE_DIR.$imageInfo['basename']; 
 	}
 } else {
 	$imageIndex = file("$index", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	$img = $folder.$imageIndex[array_rand(file($index))];
+	$img = IMAGE_DIR.$imageIndex[array_rand(file($index))]; 
 }
 
-if ($img!=null) {
+if (is_null($img)) {
+	echo "<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
+		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
+		<link rel=\"icon\" href=\"img/9.png\" type=\"image/x-png\" />
+		<link href=\"css/random.css\" rel=\"stylesheet\" media=\"all\" />
+		<title>nyaa~ error</title>
+		</head>
+	<body>
+		<a href=\"https://github.com/fastpoke/image_randomise\"><img class=\"github\" src=\"img/github.png\"></a>
+		<div class=\"content\">
+			<div class=\"error\">
+			<span>Oops~! Something is broken ._.</span>
+			</div>
+		</div>
+		<div class=\"footer\"><span><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></span></div>
+	</body>
+</html>";
+} else {
 	$imageInfo = pathinfo($img);
 	$name = $imageInfo['basename'];
 	$fsize = filesize("$img");
@@ -62,32 +81,9 @@ if ($img!=null) {
 					<img src=\"$img\" alt=\"$name\" title=\"$name\">
 			</div>
 		</div>
-		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></div>
+		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"$url\" target=\"_blank\">nyan.me</a></div>
 	</body>
 </html>";
-} else {
-	if ( function_exists('imagecreate') ) {
-	echo "<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
-		<meta http-equiv=\"Cache-control\" content=\"must-revalidate\">
-		<meta name=\"generator\" content=\"cat /dev/urandom > random~\" />
-		<link rel=\"icon\" href=\"img/9.png\" type=\"image/x-png\" />
-		<link href=\"css/random.css\" rel=\"stylesheet\" media=\"all\" />
-		<title>nyaa~ error</title>
-		</head>
-	<body>
-		<a href=\"https://github.com/fastpoke/image_randomise\"><img class=\"github\" src=\"img/github.png\"></a>
-		<div class=\"content\">
-			<div class=\"error\">
-			<span>Oops~! Something is broken ._.</span>
-			</div>
-		</div>
-		<div class=\"footer\"><span><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></span></div>
-	</body>
-</html>";
-	}
-}
 
+}
 ?>
