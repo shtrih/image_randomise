@@ -1,6 +1,9 @@
 <?php
 	//global variables
-	//$url = 'http://server.tld/'; $folder = '/nyaa_images/'; for example
+	/*   for example:
+	$url = 'http://server.tld/';
+	$folder = '/nyaa_images/';
+	*/
 	$url = '';
 	$folder = '';
 	$index = $folder.'index.ls';
