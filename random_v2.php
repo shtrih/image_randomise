@@ -1,7 +1,7 @@
 <?php
 	//global variables
-	define('SITE_URL', '');  // Site url ( define('SITE_URL', 'http://server.tld'); for example )
-	define('IMAGE_DIR', ''); // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
+	define('SITE_URL', 'http://hitagi.ru');  // Site url ( define('SITE_URL', 'http://server.tld'); for example )
+	define('IMAGE_DIR', dirname(__FILE__).'/i/'); // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
 	$index = IMAGE_DIR.'index.ls';
 	$extList = array(
 		'gif'  => 'image/gif',
