@@ -1,6 +1,8 @@
 <?php
 	//global variables
-	$folder = '/foo/bar/';
+	//$url = 'http://server.tld/'; $folder = '/nyaa_images/'; for example
+	$url = '';
+	$folder = '';
 	$index = $folder.'index.ls';
 	$extList = array();
 	$extList['gif'] = 'image/gif';
@@ -34,7 +36,7 @@ if ($img!=null) {
 	$resolution = getimagesize("$img");
 	$width  = $resolution [0];
 	$height = $resolution [1];
-	echo "<!-- current version: 0.7 -->
+	echo "<!-- current version: 0.8 -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -48,9 +50,9 @@ if ($img!=null) {
 		<a href=\"https://github.com/fastpoke/image_randomise\"><img class=\"github\" src=\"img/github.png\"></a>
 		<div class=\"content\">
 			<div class=\"share\">
-				<a class=\"gplus\" href=\"https://plus.google.com/share?url=http://nyan.me/$img\" onclick=\"javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;\"><img src=\"img/gplus.png\" alt=\"Share on Google+\" title=\"Share on Google+\"/></a>
+				<a class=\"gplus\" href=\"https://plus.google.com/share?url=$url$img\" onclick=\"javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;\"><img src=\"img/gplus.png\" alt=\"Share on Google+\" title=\"Share on Google+\"/></a>
 				<img class=\"reload\" src=\"img/reload.png\" onClick=\"window.location.reload(false);\" title=\"Reload page\">
-				<input readonly class=\"link\" id=\"copy\" type=\"text\" value=\"http://nyan.me/$img\" onclick=\"this.select()\">
+				<input readonly class=\"link\" id=\"copy\" type=\"text\" value=\"$url$img\" onclick=\"this.select()\">
 			</div>
 			<div class=\"info\"><span>$width &times; $height px &nbsp;&nbsp;@&nbsp;&nbsp; $size Kb</span></div>
 			<div class=\"img\">
