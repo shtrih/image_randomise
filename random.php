@@ -20,7 +20,7 @@ if (isset($_GET['img'])) {
 	}
 } else {
 	//+Rei Ayanami and +Kot Obormot randomise engine fix
-	$imageIndex = file("$index", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$imageIndex = file($index, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	$img = IMAGE_DIR.$imageIndex[array_rand(file($index))];
 }
 
