@@ -56,7 +56,7 @@ if ($img!=null) {
 			</div>
 			<div class=\"info\"><span>$width &times; $height px &nbsp;&nbsp;@&nbsp;&nbsp; $size Kb</span></div>
 			<div class=\"img\">
-					<img src=\"/$img\" alt=\"$name\" title=\"$name\">
+					<img src=\"$img\" alt=\"$name\" title=\"$name\">
 			</div>
 		</div>
 		<div class=\"footer\"><a href=\"http://fastpoke.org/\" target=\"_blank\">neko power solutions~</a> at <a href=\"http://nyan.me/\" target=\"_blank\">nyan.me</a></div>
