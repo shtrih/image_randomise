@@ -1,5 +1,5 @@
 $(function () {
-	$('.reload').on('click', function () {
+	$('.reload,.img a').on('click', function () {
 		$.getJSON('', {ajax:true}, function (data) {
 			$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
 			$('#copy').val(data.url);

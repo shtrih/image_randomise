@@ -87,7 +87,7 @@ if (is_null($img)) {
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
 			<div class="img">
-				<img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" />
+				<a href=""><img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" /></a>
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
