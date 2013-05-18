@@ -1,10 +1,3 @@
-* {
-	-webkit-transition: 0.5s;
-	   -moz-transition: 0.5s;
-	     -o-transition: 0.5s;
-	        transition: 0.5s;
-}
-
 html {
 	background: url("img/bg.png") center repeat scroll;
 }
@@ -59,6 +52,13 @@ html {
 	   -moz-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset;
 	     -o-box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset;
 	        box-shadow: rgba(0,0,0,0.2) 0px 0px 5px inset;
+}
+
+.reload, .reload:hover, .reload:active {
+	-webkit-transition: 0.5s;
+	   -moz-transition: 0.5s;
+	     -o-transition: 0.5s;
+	        transition: 0.5s;
 }
 
 .link {
