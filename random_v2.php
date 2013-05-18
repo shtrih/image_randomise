@@ -40,7 +40,7 @@ if (is_null($img)) {
 		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="img/github.png" /></a>
 		<div class="content">
 			<div class="error">
-			<span>Oops~! Something is broken ._.</span>
+				<span>Oops~! Something is broken ._.</span>
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
@@ -53,6 +53,17 @@ if (is_null($img)) {
 	$resolution = getimagesize($img);
 	$width  = $resolution [0];
 	$height = $resolution [1];
+
+	if (isset($_GET['ajax'])) {
+		$imageInfo = new stdClass();
+		$imageInfo->url = SITE_URL.IMAGE_URL.$name;
+		$imageInfo->size = $size;
+		$imageInfo->resolution = $resolution;
+
+		echo json_encode($imageInfo);
+		exit;
+	}
+
 	echo '<!DOCTYPE html>
 <html>
 	<head>
@@ -62,13 +73,15 @@ if (is_null($img)) {
 		<meta name="generator" content="cat /dev/urandom › random~" />
 		<title>nyaa~ '.$name.'</title>
 		<link href="css/random.css" rel="stylesheet" media="all" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/random.js"></script>
 	</head>
 	<body>
 		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="img/github.png" /></a>
 		<div class="content">
 			<div class="share">
-				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.$img.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="img/gplus.png" alt="Share on Google+" title="Share on Google+"/></a>
-				<img class="reload" src="img/reload.png" onClick="window.location.reload(false);" title="Reload page" />
+				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.$img.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="img/gplus.png" alt="Share on Google+" title="Share n Google+" /></a>
+				<a class="reload" href="" title="Reload image"></a>
 				<input readonly class="link" id="copy" type="text" value="'.SITE_URL.$img.'" onclick="this.select()" />
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
