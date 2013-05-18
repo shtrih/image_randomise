@@ -58,6 +58,7 @@ if (is_null($img)) {
 	if (isset($_GET['ajax'])) {
 		$imageInfo = new stdClass();
 		$imageInfo->url = SITE_URL.IMAGE_URL.$name;
+		$imageInfo->name = $name;
 		$imageInfo->size = $size;
 		$imageInfo->resolution = $resolution;
 
@@ -87,6 +88,7 @@ if (is_null($img)) {
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
 			<div class="img">
+				<div class="overlay"></div>
 				<a href=""><img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" /></a>
 			</div>
 		</div>
