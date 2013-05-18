@@ -12,7 +12,7 @@
 		'png'  => 'image/png'
 	);
 
-if (isset($_GET['img'])) {
+if (isset($_GET['img']) && !isset($_GET['ajax'])) {
 	$imageInfo = pathinfo($_GET['img']);
 	if (
 	    isset( $extList[ strtolower( $imageInfo['extension'] ) ] ) &&
