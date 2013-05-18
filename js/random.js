@@ -29,7 +29,6 @@ $(function () {
 
 	window.addEventListener("popstate", function(e) {
 		if (history.state){
-			console.log(location.pathname, e.state);
 			applyData(e.state);
 		}
 	});
