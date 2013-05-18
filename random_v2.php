@@ -54,6 +54,17 @@ if (is_null($img)) {
 	$resolution = getimagesize($img);
 	$width  = $resolution [0];
 	$height = $resolution [1];
+
+	if (isset($_GET['ajax'])) {
+		$imageInfo = new stdClass();
+		$imageInfo->url = SITE_URL.IMAGE_URL.$name;
+		$imageInfo->size = $size;
+		$imageInfo->resolution = $resolution;
+
+		echo json_encode($imageInfo);
+		exit;
+	}
+
 	echo '<!DOCTYPE html>
 <html>
 	<head>
@@ -63,13 +74,15 @@ if (is_null($img)) {
 		<meta name="generator" content="cat /dev/urandom › random~" />
 		<title>nyaa~ '.$name.'</title>
 		<link href="'.SITE_REAL_DIR.'/css/random.css" rel="stylesheet" media="all" />
+		<script src="'.SITE_REAL_DIR.'/js/jquery-1.9.1.min.js"></script>
+		<script src="'.SITE_REAL_DIR.'/js/random.js"></script>
 	</head>
 	<body>
 		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
 		<div class="content">
 			<div class="share">
-				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.IMAGE_URL.$name.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="'.SITE_REAL_DIR.'/img/gplus.png" alt="Share on Google+" title="Share on Google+"/></a>
-				<img class="reload" src="'.SITE_REAL_DIR.'/img/reload.png" onClick="window.location.reload(false);" title="Reload page" />
+				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.IMAGE_URL.$name.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="'.SITE_REAL_DIR.'/img/gplus.png" alt="Share on Google+" title="Share on Google+" /></a>
+				<a class="reload" href="" title="Reload image"></a>
 				<input readonly class="link" id="copy" type="text" value="'.SITE_URL.IMAGE_URL.$name.'" onclick="this.select()" />
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
