@@ -1,5 +1,5 @@
 html {
-	background: url("img/bg.png") center repeat scroll;
+	background: url("../img/bg.png") center repeat scroll;
 }
 
 .content {
@@ -111,10 +111,6 @@ html {
 	font-family: Arial;
 	font-size: 10px;
 	padding: 10px 0 10px 0;
-}
-
-.footer span {
-	display: block;
 	text-align: center;
 }
 
