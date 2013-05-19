@@ -1,8 +1,10 @@
 $(function () {
-	var overlay = $('.overlay');
+	var overlay = $('.overlay'),
+		image = $('.img img'),
 		imageloader = new Image();
 
 	$('.reload,.img a').on('click', function () {
+		image.css('opacity', '0.4');
 		overlay.fadeIn('fast');
 
 		$.getJSON('', {ajax:true}, function (data) {
@@ -13,12 +15,12 @@ $(function () {
 		return false;
 	});
 
-	function applyData(data, push) {
+	function applyData(data) {
 		imageloader.onload = function () {
-			$('.img img')
-				.attr('src', data.url)
+			image.attr('src', data.url)
 				.attr('alt', data.name)
-				.attr('title', data.name);
+				.attr('title', data.name)
+				.css('opacity', '1');
 			overlay.fadeOut('fast');
 		};
 		imageloader.src = data.url;

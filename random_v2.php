@@ -15,13 +15,13 @@
 if (isset($_GET['img']) && !isset($_GET['ajax'])) {
 	$imageInfo = pathinfo($_GET['img']);
 	if (
-	    isset( $extList[ strtolower( $imageInfo['extension'] ) ] ) &&
-        file_exists( IMAGE_DIR.$imageInfo['basename'] )
+	    isset( $extList[ strtolower($imageInfo['extension']) ] )
+	    && file_exists( IMAGE_DIR.$imageInfo['basename'] )
     ) {
 		$img = IMAGE_DIR.$imageInfo['basename'];
 	}
 } else {
-	$imageIndex = file("$index", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	$imageIndex = file($index, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	$img = IMAGE_DIR.$imageIndex[array_rand(file($index))];
 }
 
@@ -35,13 +35,13 @@ if (is_null($img)) {
 		<meta name="generator" content="cat /dev/urandom › random~" />
 		<link rel="icon" href="'.SITE_REAL_DIR.'/img/9.png" type="image/x-png" />
 		<link href="'.SITE_REAL_DIR.'/css/random.css" rel="stylesheet" media="all" />
-		<title>nyaa~ error</title>
+		<title>nyaa~ 404 Not found</title>
 		</head>
 	<body>
 		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
 		<div class="content">
 			<div class="error">
-			<span>Oops~! Something is broken ._.</span>
+				<span>Oops~! Something is broken ._.</span>
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
@@ -84,13 +84,16 @@ if (is_null($img)) {
 		<div class="content">
 			<div class="share">
 				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.IMAGE_URL.$name.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="'.SITE_REAL_DIR.'/img/gplus.png" alt="Share on Google+" title="Share on Google+" /></a>
-				<a class="reload" href="" title="Reload image"></a>
+				<a class="reload" href="." title="Reload image"></a>
+				<a class="fullscreen" href="'.SITE_URL.IMAGE_URL.$name.'" title="Open image in new window" target="_blank"></a>
 				<input readonly class="link" id="copy" type="text" value="'.SITE_URL.IMAGE_URL.$name.'" onclick="this.select()" />
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
 			<div class="img">
 				<div class="overlay"></div>
-				<a href=""><img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" /></a>
+				<a href=".">
+					<img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" />
+				</a>
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
