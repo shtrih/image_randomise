@@ -26,6 +26,7 @@ $(function () {
 		imageloader.src = data.url;
 		$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
 		$('#copy').val(data.url);
+		$('.fullscreen').attr('href', data.url);
 		$('.info span').html(data.resolution[0] + ' &times; ' + data.resolution[1] + ' px &nbsp;&nbsp;@&nbsp;&nbsp; ' + data.size + ' Kb');
 	}
 

@@ -84,14 +84,14 @@ if (is_null($img)) {
 		<div class="content">
 			<div class="share">
 				<a class="gplus" href="https://plus.google.com/share?url='.SITE_URL.IMAGE_URL.$name.'" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;"><img src="'.SITE_REAL_DIR.'/img/gplus.png" alt="Share on Google+" title="Share on Google+" /></a>
-				<a class="reload" href="." title="Reload image"></a>
-				<a class="fullscreen" href="'.SITE_URL.IMAGE_URL.$name.'" title="Open image in new window" target="_blank"></a>
+				<a class="reload" href="" title="Reload image"></a>
+				<a class="fullscreen" href="'.SITE_URL.IMAGE_URL.$name.'" title="Open image"></a>
 				<input readonly class="link" id="copy" type="text" value="'.SITE_URL.IMAGE_URL.$name.'" onclick="this.select()" />
 			</div>
 			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
 			<div class="img">
 				<div class="overlay"></div>
-				<a href=".">
+				<a href="">
 					<img src="'.SITE_URL.IMAGE_URL.$name.'" alt="'.$name.'" title="'.$name.'" />
 				</a>
 			</div>
