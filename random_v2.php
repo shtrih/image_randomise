@@ -88,7 +88,7 @@ if (is_null($img)) {
 				<a class="fullscreen" href="'.SITE_URL.IMAGE_URL.$name.'" title="Open image"></a>
 				<input readonly class="link" id="copy" type="text" value="'.SITE_URL.IMAGE_URL.$name.'" onclick="this.select()" />
 			</div>
-			<div class="info"><span>'.$width.' &times; '.$height.' px &nbsp;&nbsp;@&nbsp;&nbsp; '.$size.' Kb</span></div>
+			<div class="info"><span class="width">'.$width.'</span> &times; <span class="height">'.$height.'</span> px &nbsp;&nbsp;@&nbsp;&nbsp; <span class="size">'.$size.'</span> Kb</div>
 			<div class="img">
 				<div class="overlay"></div>
 				<a href="">

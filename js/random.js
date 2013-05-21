@@ -24,7 +24,7 @@ $(function () {
 				.attr('alt', data.name)
 				.attr('title', data.name)
 				.css('opacity', '1')
-				.data('height', data.resolution[1]);
+			;
 			overlay.fadeOut('fast');
 			resizeToWindow();
 		};
@@ -32,7 +32,11 @@ $(function () {
 		$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
 		$('#copy').val(data.url);
 		$('.fullscreen').attr('href', data.url);
-		$('.info span').html(data.resolution[0] + ' &times; ' + data.resolution[1] + ' px &nbsp;&nbsp;@&nbsp;&nbsp; ' + data.size + ' Kb');
+		$('.info')
+			.find('.width').text(data.resolution[0]).end()
+			.find('.height').text(data.resolution[1]).end()
+			.find('.size').text(data.size)
+		;
 	}
 
 	window.addEventListener("popstate", function(e) {
@@ -52,6 +56,7 @@ $(function () {
 
 	function resizeToWindow() {
 		var window_height = $(window).height(),
+			max_height = Number($('.info .height').text()),
 			offset,
 			result_height;
 
@@ -61,8 +66,8 @@ $(function () {
 			+ 4
 		;
 		result_height = window_height - offset;
-		if (result_height > image.data('height')) {
-			result_height = image.data('height');
+		if (result_height > max_height) {
+			result_height = max_height;
 		}
 
 		image.animate({
