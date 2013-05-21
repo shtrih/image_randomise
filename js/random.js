@@ -23,15 +23,16 @@ $(function () {
 			image.attr('src', data.url)
 				.attr('alt', data.name)
 				.attr('title', data.name)
-				.css('opacity', '1');
+				.css('opacity', '1')
+				.data('height', data.resolution[1]);
 			overlay.fadeOut('fast');
+			resizeToWindow();
 		};
 		imageloader.src = data.url;
 		$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
 		$('#copy').val(data.url);
 		$('.fullscreen').attr('href', data.url);
 		$('.info span').html(data.resolution[0] + ' &times; ' + data.resolution[1] + ' px &nbsp;&nbsp;@&nbsp;&nbsp; ' + data.size + ' Kb');
-		image.data('height', data.resolution[1]);
 	}
 
 	window.addEventListener("popstate", function(e) {
@@ -52,7 +53,7 @@ $(function () {
 	function resizeToWindow() {
 		var window_height = $(window).height(),
 			offset,
-			result_height = 0;
+			result_height;
 
 		offset = $('.share').outerHeight()
 			+ $('.info').outerHeight()
