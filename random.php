@@ -17,8 +17,8 @@
 if (isset($_GET['img'])) {
 	$imageInfo = pathinfo($_GET['img']);
 	if (
-	    isset( $extList[ strtolower( $imageInfo['extension'] ) ] ) &&
-        file_exists( IMAGE_DIR.$imageInfo['basename'] )
+	    isset( $extList[ strtolower( $imageInfo['extension'] ) ] )
+	    && file_exists( IMAGE_DIR.$imageInfo['basename'] )
     ) {
 		$img = IMAGE_DIR.$imageInfo['basename'];
 	}
