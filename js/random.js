@@ -5,8 +5,52 @@ $(function () {
 
 	image.css('max-width', 'none');
 	resizeToWindow();
+	bindHotkeys();
 
 	$('.reload,.img a').on('click', function () {
+		loadNextImage();
+
+		return false;
+	});
+
+	window.addEventListener('popstate', function(e) {
+		if (history.state && e.state){
+			applyData(e.state);
+		}
+	});
+
+	/* https://groups.google.com/forum/?fromgroups#!topic/jquery-en/SgDVE8Y_XAA */
+	var resizeTimer = null;
+	$(window).on('resize', function () {
+		if (resizeTimer)
+			clearTimeout(resizeTimer);
+
+		resizeTimer = setTimeout(resizeToWindow, 500);
+	});
+
+	function bindHotkeys() {
+		$(document).on('keyup', function (e) {
+			var keyCode = e.keyCode || e.which,
+				keys = {
+					left:  37,
+					right: 39,
+					space: 32
+				};
+
+			switch (keyCode) {
+				case keys.left:
+					history.go(-1);
+				break;
+
+				case keys.space:
+				case keys.right:
+					loadNextImage();
+				break;
+			}
+		});
+	}
+
+	function loadNextImage() {
 		image.css('opacity', '0.4');
 		overlay.fadeIn('fast');
 
@@ -14,9 +58,7 @@ $(function () {
 			applyData(data);
 			history.pushState(data, null, document.location.pathname + '?img=' + data.name);
 		});
-
-		return false;
-	});
+	}
 
 	function applyData(data) {
 		imageloader.onload = function () {
@@ -41,21 +83,6 @@ $(function () {
 
 		resizeToWindow();
 	}
-
-	window.addEventListener("popstate", function(e) {
-		if (history.state && e.state){
-			applyData(e.state);
-		}
-	});
-
-	/* https://groups.google.com/forum/?fromgroups#!topic/jquery-en/SgDVE8Y_XAA */
-	var resizeTimer = null;
-	$(window).on('resize', function () {
-		if (resizeTimer)
-			clearTimeout(resizeTimer);
-
-		resizeTimer = setTimeout(resizeToWindow, 500);
-	});
 
 	function resizeToWindow() {
 		var window_height = $(window).height(),
