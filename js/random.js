@@ -26,16 +26,19 @@ $(function () {
 				.css('opacity', '1')
 			;
 			overlay.fadeOut('fast');
+
+			$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
+			$('#copy').val(data.url);
+			$('.fullscreen').attr('href', data.url);
+			$('.info')
+				.find('.width').text(data.resolution[0]).end()
+				.find('.height').text(data.resolution[1]).end()
+				.find('.size').text(data.size)
+			;
+			$('title').text(data.name);
 		};
 		imageloader.src = data.url;
-		$('.gplus').attr('href', 'https://plus.google.com/share?url=' + encodeURI(data.url));
-		$('#copy').val(data.url);
-		$('.fullscreen').attr('href', data.url);
-		$('.info')
-			.find('.width').text(data.resolution[0]).end()
-			.find('.height').text(data.resolution[1]).end()
-			.find('.size').text(data.size)
-		;
+
 		resizeToWindow();
 	}
 
