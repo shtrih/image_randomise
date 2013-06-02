@@ -1,6 +1,6 @@
 <?php
 	//global variables
-	define('SITE_URL', 'http://hitagi.ru');                   // Site url ( define('SITE_URL', 'http://server.tld'); for example )
+	define('SITE_URL', $_SERVER['HTTP_HOST']);                   // Site url ( define('SITE_URL', 'http://server.tld'); for example )
 	define('SITE_REAL_DIR', '/'.basename(dirname(__FILE__))); // Url to resources (css, images)
 	define('IMAGE_DIR', './../i/');             // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
 	define('IMAGE_URL', '/i/');             // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
@@ -44,7 +44,7 @@ if (is_null($img)) {
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
-		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
+		<a href="https://github.com/shtrih/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
 		<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter7320721 = new Ya.Metrika({id:7320721, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/7320721" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 	</body>
 </html>';
@@ -96,7 +96,7 @@ if (is_null($img)) {
 			</div>
 		</div>
 		<div class="footer"><a href="http://fastpoke.org/" target="_blank">neko power solutions~</a> at <a href="'.SITE_URL.'" target="_blank">'.SITE_URL.'</a></div>
-		<a href="https://github.com/fastpoke/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
+		<a href="https://github.com/shtrih/image_randomise"><img class="github" src="'.SITE_REAL_DIR.'/img/github.png" /></a>
 		<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter7320721 = new Ya.Metrika({id:7320721, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/7320721" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 	</body>
 </html>';
