@@ -1,9 +1,9 @@
 <?php
 	//global variables
-	define('SITE_URL', $_SERVER['HTTP_HOST']);                   // Site url ( define('SITE_URL', 'http://server.tld'); for example )
+	define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST']);      // Site url without end slash ( define('SITE_URL', 'http://server.tld'); for example )
 	define('SITE_REAL_DIR', '/'.basename(dirname(__FILE__))); // Url to resources (css, images)
-	define('IMAGE_DIR', './../i/');             // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
-	define('IMAGE_URL', '/i/');             // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
+	define('IMAGE_DIR', './../i/');                           // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
+	define('IMAGE_URL', '/i/');                               // Images directory with end slash ( define('IMAGE_DIR', '/nyaa_images/'); for example )
 	$index = './index.ls';
 	$extList = array(
 		'gif'  => 'image/gif',
